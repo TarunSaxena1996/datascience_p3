@@ -58,7 +58,7 @@ jobs:
           # Build a docker container and
           # push it to ECR so that it can
           # be deployed to ECS.
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build -no-cache -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           
@@ -89,7 +89,7 @@ jobs:
       - name: Stop and remove  container if running
         run: |
           docker ps -q --filter "name=datascience_p3" | grep -q . \
-          && docker stop *** && docker rm -fv datascience_p3 \
+          && docker stop datascience_p3 && docker rm -fv datascience_p3 \
           || echo "Container not running or already removed"
       - name: Run Docker Image to serve users
         run: |
