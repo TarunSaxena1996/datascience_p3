@@ -88,8 +88,9 @@ jobs:
          
       - name: Stop and remove  container if running
         run: |
-          docker ps -q --filter "name=datascience_p3" | grep -q . && docker stop datascience_p3 && docker rm -fv datascience_p3
-       
+          docker ps -q --filter "name=***" | grep -q . \
+          && docker stop *** && docker rm -fv *** \
+          || echo "Container not running or already removed"
       - name: Run Docker Image to serve users
         run: |
          docker run -d -p 8080:8080 --ipc="host" --name=datascience_p3 -e 'AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}' -e 'AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}' -e 'AWS_REGION=${{ secrets.AWS_REGION }}'  ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
