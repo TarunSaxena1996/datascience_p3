@@ -88,8 +88,8 @@ jobs:
          
       - name: Stop and remove  container if running
         run: |
-          docker ps -q --filter "name=***" | grep -q . \
-          && docker stop *** && docker rm -fv *** \
+          docker ps -q --filter "name=datascience_p3" | grep -q . \
+          && docker stop *** && docker rm -fv datascience_p3 \
           || echo "Container not running or already removed"
       - name: Run Docker Image to serve users
         run: |
