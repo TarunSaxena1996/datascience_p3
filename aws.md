@@ -30,3 +30,11 @@ Enter name of work folder: [press Enter for _work] (press enter)
 $ ./run.sh
 
 <img width="798" alt="image" src="https://github.com/user-attachments/assets/4aef6f9c-6e7d-41a6-aca1-30855f979591" />
+<img width="740" alt="image" src="https://github.com/user-attachments/assets/f5398025-b162-4998-ba4d-b2113db26130" />
+<img width="1443" alt="image" src="https://github.com/user-attachments/assets/92a5fba2-8f98-4f42-90a7-711bf9e48b9d" />
+<img width="1190" alt="image" src="https://github.com/user-attachments/assets/aa190137-a37b-4c83-a06b-bb0fc624bbdc" />
+
+
+ECR-
+<img width="1456" alt="image" src="https://github.com/user-attachments/assets/8b5ba25a-28cd-469d-b276-9d8e1f9f14b1" />
+
