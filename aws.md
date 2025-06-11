@@ -28,3 +28,5 @@ Enter name of work folder: [press Enter for _work] (press enter)
 
 # Last step, run it!
 $ ./run.sh
+
+<img width="798" alt="image" src="https://github.com/user-attachments/assets/4aef6f9c-6e7d-41a6-aca1-30855f979591" />
